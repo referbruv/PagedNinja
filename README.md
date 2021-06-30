@@ -4,11 +4,13 @@ A sample project which explains the implementation of Pagination in ASP.NET Core
 
 # Features
 
-Pagination demonstration
-EF Core with Sqlite integration
-Repository pattern with Onion Architecture
-Layered architecture with separate projects for API and Core
-Swagger Integration
-Built on ASP.NET Core 5
+* Pagination demonstration
+* EF Core with Sqlite integration
+* Repository pattern with Onion Architecture
+* Layered architecture with separate projects for API and Core
+* Swagger Integration
+* Built on ASP.NET Core 5
 
-The complete explanation of this project is available at 
+The complete explanation of this project is available at:
+
+https://referbruv.com/blog/posts/implementing-pagination-in-aspnet-core-web-api-and-entity-framework-core
