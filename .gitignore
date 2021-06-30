@@ -1,0 +1,10 @@
+.vscode
+.vs
+
+MyBlog.Api/.vscode
+MyBlog.Api/bin
+MyBlog.Api/obj
+
+MyBlog.Core/.vscode
+MyBlog.Core/bin
+MyBlog.Core/obj
