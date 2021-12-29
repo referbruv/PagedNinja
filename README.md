@@ -1,3 +1,7 @@
+[![.NET](https://github.com/referbruv/PagedNinja/actions/workflows/dotnet.yml/badge.svg)](https://github.com/referbruv/PagedNinja/actions/workflows/dotnet.yml)
+![GitHub stars](https://img.shields.io/github/stars/referbruv/PagedNinja)
+[![Twitter Follow](https://img.shields.io/twitter/follow/referbruv?style=social&label=follow)](https://twitter.com/referbruv)
+
 # PagedNinja
 
 PagedNinja is a simple boilerplate project which explains the implementation of Pagination in ASP.NET Core Web API together with Entity Framework Core. 
