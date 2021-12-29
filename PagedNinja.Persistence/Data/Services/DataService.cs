@@ -1,13 +1,9 @@
-﻿using MyBlog.Core.Entities;
-using MyBlog.Core.Repositories;
+﻿using PagedNinja.Core.Data.Repositories;
+using PagedNinja.Core.Data.Services;
+using PagedNinja.Persistence.Data.Repositories;
 
-namespace MyBlog.Core.Services
+namespace PagedNinja.Persistence.Data.Services
 {
-    public interface IDataService
-    {
-        IPostsRepository Posts { get; }
-    }
-
     public class DataService : IDataService
     {
         private readonly MyBlogContext _context;
@@ -18,5 +14,10 @@ namespace MyBlog.Core.Services
         }
 
         public IPostsRepository Posts => new PostsRepository(_context);
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
+        }
     }
 }

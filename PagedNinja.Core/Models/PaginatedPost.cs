@@ -1,15 +1,15 @@
-﻿using MyBlog.Core.Entities;
+﻿using PagedNinja.Core.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyBlog.Core
+namespace PagedNinja.Core.Models
 {
     public class PaginatedPost
     {
         public PaginatedPost(IEnumerable<Post> items, int count, int pageNumber, int postsPerPage)
         {
-            Metadata = new Metadata
+            PageInfo = new PageInfo
             {
                 CurrentPage = pageNumber,
                 PostsPerPage = postsPerPage,
@@ -19,7 +19,7 @@ namespace MyBlog.Core
             this.Posts = items;
         }
 
-        public Metadata Metadata { get; set; }
+        public PageInfo PageInfo { get; set; }
 
         public IEnumerable<Post> Posts { get; set; }
 
@@ -31,33 +31,27 @@ namespace MyBlog.Core
         }
     }
 
-    public class Metadata
+    public class PageInfo
     {
+        public bool HasPreviousPage
+        {
+            get
+            {
+                return (CurrentPage > 1);
+            }
+        }
+
+        public bool HasNextPage
+        {
+            get
+            {
+                return (CurrentPage < TotalPages);
+            }
+        }
+
         public int TotalPages { get; set; }
         public int CurrentPage { get; set; }
         public int PostsPerPage { get; set; }
         public int TotalPosts { get; set; }
-    }
-
-    public class QueryParams
-    {
-        private const int _maxPageSize = 50;
-
-        private int _page = 10;
-
-        public int Page { get; set; } = 1;
-
-        public int PostsPerPage
-        {
-            get
-            {
-                return _page;
-            }
-            set
-            {
-                if (value > _maxPageSize) _page = _maxPageSize;
-                else _page = value;
-            }
-        }
     }
 }
