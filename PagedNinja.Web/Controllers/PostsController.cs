@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyBlog.Core;
-using MyBlog.Core.Services;
+using PagedNinja.Core.Data.Services;
+using PagedNinja.Core.Models;
 
-namespace MyBlog.Api.Controllers
+namespace PagedNinja.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

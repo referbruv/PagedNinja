@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
+using PagedNinja.Core.Data.Entities;
 
-namespace MyBlog.Core.Entities
+namespace PagedNinja.Persistence.Data
 {
     public class MyBlogContext : DbContext
     {
